@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name="com.product.bean.Product" table="T_PRD_DTL">
+      <meta attribute="class-description">
+         This class contains the product details
+      </meta>
+      <id name="productId" type="int" column="PRD_DTL_ID">
+         <generator class="native"/>
+      </id>
+      <property name="name" column="PRD_NAME" type="string" />
+      <property name="productType" column="PRD_TYPE">
+      
+      	<type name="org.hibernate.type.EnumType">
+        <param name="enumClass">com.product.type.ProductType</param>
+    	</type>
+      </property>
+      <property name="count" column="PRD_COUNT" type="int"/>
+   </class>
+</hibernate-mapping>

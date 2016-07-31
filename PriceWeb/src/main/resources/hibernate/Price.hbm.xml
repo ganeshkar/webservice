@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name="com.price.bean.Price" table="T_PRD_PRICE">
+      <meta attribute="class-description">
+         This class contains the product details
+      </meta>
+       <id name="productId"  type="int" column="PRD_DTL_ID">   
+       </id>
+      <property name="priceVal" column="PRD_PRICE_VAL" type="float"/>
+   </class>
+</hibernate-mapping>
